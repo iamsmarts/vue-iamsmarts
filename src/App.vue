@@ -25,16 +25,23 @@
       <!-- <h1>CONTENT</h1> -->
       <div class="about-me-home">
         <div class="about-me-title">
-          <h2>|| About me ||</h2>
+          <h2>|| About me</h2>
         </div>
         <div class="about-me-copy">
-          <p>Hi, I'm Rudy Quevedo, a front end guy from Los Angeles, CA.
+          <p>Hi I'm Rudy - Currently Tech Lead at <a href="http://hi5.agency" class="hi5">hi5.agency</a>, previously I was the Senior Front End Developer at <a href="http://ignitioncreative.com/" class="ignition">ignition creative</a>. When my nose isn't buried in code, I'm heavy into gaming whether its on one of the new gen consoles, pc, or even some board games.</p>
+
+          <p><strong>What I'm into right now:</strong> Recently I have been spending sometime with <a href="https://vuejs.org/" class="vue">Vue.js</a>, and used vue on our last two launched projects.</p>
+
+          <p><strong>Current Favorite Resource</strong>On my drive in to work and at the gym Wes Bos and Scott Tolinski's <a href="https://syntax.fm/" class="syntax">syntax.fm</a> Podcast is my go to. I also find a ton of gems in <a href="https://frontendfoc.us/" class="fefocus">Frontend Focus</a>, <a href="https://news.vuejs.org/" class="vue">Vue.js News</a>, and <a href="https://react.statuscode.com/" class="react">React Status newsletters</a>. </p>
+
+
+          <!-- <p>Hi, I'm Rudy Quevedo, a front end guy from Los Angeles, CA.
             I'm currently the Tech Lead for <a href="http://hi5.agency" target="_blank">&nbsp;hi5.agency </a>.
           </p>
           <p>
             For the last 12 years I've been in love with everything dev, always having something new to learn has fueled my passion for tech.
             I've had the luck of working in many different environments, building great web experiences to support a marketing campaigns, to educational software, to online product showcases.
-          </p>
+          </p> -->
             <!-- Recently I've been really excited about building serveless projects, and fortunately have had the oppoturnity to launch
             the last two projects with <span class="vue">Vue.js</span>, <span class="aws">AWS API Gateway</span>, <span class="aws">AWS DynamoDB</span>, and <span class="aws">AWS Lambda</span>
           </p> -->
@@ -200,20 +207,67 @@ body{
     align-items: flex-start;
     // padding: 1.5em;
     font-size: 1.2rem;
-    line-height: 1.5em;
+    line-height: 1.4em;
     a{
+      text-decoration: none;
+      padding: 0px 4px;
+    }
+    .hi5{
       background:#03B0AB;
       color: #fff;
-      text-decoration: none;
-
+      &:hover{
+        background:#fff;
+        color: #03B0AB;
+      }
     }
+    .vue{
+      background: #6BB986;
+      color: #465464;
+      &:hover{
+        background:#465464;
+        color:  #6BB986;
+      }
+    }
+    .syntax{
+      background: #000;
+      color: #E2BC6A;
+      &:hover{
+        background:#E2BC6A;
+        color:  #000;
+      }
+    }
+    .fefocus{
+      background: #E16D3C;
+      color: #fff;
+      &:hover{
+        background:#fff;
+        color:  #E16D3C;
+      }
+    }
+    .react{
+      background: #7FD8F7;
+      color: #fff;
+      &:hover{
+        background:#fff;
+        color:  #7FD8F7;
+      }
+    }
+    .ignition{
+      background: #B32535;
+      color: #fff;
+      &:hover{
+        background:#fff;
+        color:  #B32535;
+      }
+    }
+
     @media screen and (min-width: $break-large){
       font-size: 2em;
     }
     .about-me-title{
       order: 0;
       flex: 0 1 auto;
-      align-self: baseline;
+      align-self: normal;
       // height: 100%;
       writing-mode: tb-rl;
       text-align: left;
@@ -240,7 +294,6 @@ body{
   }
   // margin-top: 20vh;
   .vue{
-
     text-decoration: underline dotted #42b883;
   }
   .aws{
