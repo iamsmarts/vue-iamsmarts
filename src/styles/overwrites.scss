@@ -1,0 +1,15 @@
+
+
+html {
+  background-color:#1F191A;
+}
+.navbar{
+    background-color:transparent;
+}
+.hero.is-fullheight .hero-body{
+    &.home-body{
+      font-size: 1.2em;
+      z-index: 1;
+    }
+
+}
