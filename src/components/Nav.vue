@@ -13,23 +13,23 @@
         </div>
         <div id="navbarMenuHeroA" :class="[{'is-active':mobileNav}, 'navbar-menu']">
           <div class="navbar-end">
-            <a class="navbar-item is-active">
+            <router-link to="/home" class="navbar-item is-active">
               Home
-            </a>
-            <a class="navbar-item">
-              Examples
-            </a>
-            <a class="navbar-item">
-              Documentation
-            </a>
-            <span class="navbar-item">
+            </router-link>
+            <router-link to="/about" class="navbar-item">
+            About
+            </router-link>
+            <router-link to="/resume" class="navbar-item">
+              CV
+            </router-link>
+            <!-- <span class="navbar-item">
               <a class="button is-primary is-inverted">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
                 <span>Download</span>
               </a>
-            </span>
+            </span> -->
           </div>
         </div>
       </div>
