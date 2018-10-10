@@ -13,7 +13,7 @@
         </div>
         <div id="navbarMenuHeroA" :class="[{'is-active':mobileNav}, 'navbar-menu']">
           <div class="navbar-end">
-            <router-link to="/home" class="navbar-item is-active">
+            <router-link to="/" class="navbar-item is-active">
               Home
             </router-link>
             <router-link to="/about" class="navbar-item">
