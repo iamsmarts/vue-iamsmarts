@@ -18,7 +18,7 @@
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
       <div class="follow">
-        <a href="#">LAST UPDATE 10.08.18</a>
+        <a href="#">LAST UPDATE 11.29.18</a>
       </div>
       <div class="built">
         <p>powered by <a href="https://vuejs.org/" target="_blank" class="footer-link">vue</a> using <a href="https://bulma.io/" target="_blank" class="footer-link">Bulma</a></p>
