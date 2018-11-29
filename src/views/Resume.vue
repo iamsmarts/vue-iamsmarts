@@ -18,6 +18,7 @@
                     <div  v-for="(job, index) in rData" :key="index" class="column is-8 experience-body is-multiline">
                         <div class="experience-copy">
                             <h2>{{job.company}}</h2>
+                            <h3><strong>{{job.role}}</strong></h3>
                             <p class="date"><em>{{job.dates}}</em></p>
                             <ul>
                                 <li v-for="(responsibility, index) in job.responsibilities" :key="index">
@@ -70,12 +71,16 @@ export default {
         h2, .copy{
             font-size: 2rem;
             font-weight: bold;
-            width: 50%;
+            width: 100%;
+        }
+        h3{
+            width: 100%;
+            margin-bottom: 10px;
         }
         .date{
             text-align: right;
             font-size: 1.8rem;
-            line-height: 1.5;
+            line-height: 1;
         }
         .responsibility{
             margin-top: 1.5rem;

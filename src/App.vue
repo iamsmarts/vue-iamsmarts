@@ -11,7 +11,9 @@
   </div>
 
   <!-- Hero content: will be in the middle -->
-  <router-view/>
+  <transition name='fade'>
+    <router-view/>
+  </transition>
 
   <!-- Hero footer: will stick at the bottom -->
   <div class="hero-foot">
@@ -19,7 +21,7 @@
         <a href="#">LAST UPDATE 10.08.18</a>
       </div>
       <div class="built">
-        <p>powered by <a href="#">vue</a> using <a href="#">Bulma</a></p>
+        <p>powered by <a href="https://vuejs.org/" target="_blank" class="footer-link">vue</a> using <a href="https://bulma.io/" target="_blank" class="footer-link">Bulma</a></p>
       </div>
   </div>
 </section>
@@ -40,7 +42,16 @@ export default {
 <style lang="scss">
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+.fade-leave-active{
+  transition: opacity .25s ease-out;
+}
+.fade-enter-active {
+  transition: opacity .8s ease-out;
+}
 
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 .hero-foot{
   display: flex;
   font-size: 1.2rem;
@@ -48,6 +59,9 @@ export default {
   padding: 0 1rem;
   text-transform: lowercase;
   opacity: 0.5;
+}
+.hero.is-dark .hero-foot .built .footer-link a{
+    color:#00D1B2;
 }
 .hero-body{
   a{

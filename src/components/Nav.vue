@@ -3,7 +3,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item">
-            <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+            <img src="@/assets/iamsmarts-type-white-alt.png" alt="Logo">
           </a>
           <span class="navbar-burger burger" data-target="navbarMenuHeroA" @click="toggleNav">
             <span></span>
@@ -13,14 +13,14 @@
         </div>
         <div id="navbarMenuHeroA" :class="[{'is-active':mobileNav}, 'navbar-menu']">
           <div class="navbar-end">
-            <router-link to="/" class="navbar-item is-active">
+            <router-link to="/" :class="[{'is-active':pageActive('Home')}, , 'navbar-item']" >
               Home
             </router-link>
-            <router-link to="/about" class="navbar-item">
-            About
+            <router-link to="/about" :class="[{'is-active':pageActive('About')}, , 'navbar-item']" >
+              About
             </router-link>
-            <router-link to="/resume" class="navbar-item">
-              CV
+            <router-link to="/resume" :class="[{'is-active':pageActive('Resume')}, , 'navbar-item']" >
+              Resume
             </router-link>
             <!-- <span class="navbar-item">
               <a class="button is-primary is-inverted">
@@ -38,16 +38,29 @@
 </template>
 <script>
 export default {
+  props:['mobileNavHandle'],
   data(){
     return{
       mobileNav:false,
+      pageName: null,
     }
+  },
+  beforeMount(){
+    this.pageName = this.$route.name;
+  },
+  mounted(){
+    this.$router.afterEach(() => {
+      this.mobileNav = false;
+    })
   },
   methods:{
     toggleNav:function(){
-        console.log('toggling')
+      // console.log('toggling');
       this.mobileNav = !this.mobileNav;
-    }
+    },
+    pageActive: function(linkName){
+      return this.$route.name === linkName;
+    },
   }
 }
 </script>
